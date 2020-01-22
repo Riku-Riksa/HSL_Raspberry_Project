@@ -2,10 +2,11 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import React from 'react';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import ApolloClient, { getOperationName } from 'apollo-boost';
+import ApolloClient from 'apollo-boost';
 import { gql } from "apollo-boost";
 import { render } from 'react-dom';
 import { useQuery } from '@apollo/react-hooks';
+
 
 const client = new ApolloClient({
     uri: 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql',
@@ -28,17 +29,20 @@ const HSL_KYSELY = gql`
 `;
 
 function muunnos(a, b) {
-    var nykaika = getTime();
-    var aika = (a + b) - nykaika
-    var myTime = new Date((a + b) * 1000);
+    var d = new Date();
+    var aika = d.getTime();
+    var myDate = new Date((a + b) * 1000);
+    var saapuu = myDate - aika;
+    return millisToMinutes(saapuu);
+}
 
-    return (myTime.toLocaleTimeString());
-
+function millisToMinutes(millis) {
+    var minutes = Math.floor(millis / 60000);
+    return ' arrives in ' + minutes + ' min';
 }
 
 function HSL() {
     const { loading, error, data } = useQuery(HSL_KYSELY);
-
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
 
@@ -46,8 +50,8 @@ function HSL() {
     return data.stops.map(({ name, stoptimesWithoutPatterns, realtimeArrival, realtimeState, serviceDay, realtime, headsign }) => (
         <div key={name, stoptimesWithoutPatterns, realtimeArrival, realtime, realtimeState, headsign, serviceDay, realtime}>
             <p>
-                {name}, {stoptimesWithoutPatterns.map(stoptimesWithoutPatterns => <div><b>{stoptimesWithoutPatterns.headsign}</b>
-                    {muunnos(stoptimesWithoutPatterns.serviceDay, stoptimesWithoutPatterns.realtimeArrival)}
+                <b>Buss stop : {name}</b> {stoptimesWithoutPatterns.map(stoptimesWithoutPatterns => <div><b>Buss to : </b><b>{stoptimesWithoutPatterns.headsign}</b>
+                    <b>{muunnos(stoptimesWithoutPatterns.serviceDay, stoptimesWithoutPatterns.realtimeArrival)}</b>
                 </div>)}
             </p>
         </div>
@@ -64,7 +68,7 @@ const App = () => (
 
 );
 
-//olet kakkapylly
+
 render(<App />, document.getElementById('root'));
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
