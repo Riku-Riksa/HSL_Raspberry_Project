@@ -16,6 +16,11 @@ const HSL_KYSELY = gql`
   {
   stops(name: "gransinmäk") {
     name
+    patterns {
+        route {
+            shortName
+        }
+    }
     stoptimesWithoutPatterns {
         realtimeArrival
         headsign
