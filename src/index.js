@@ -18,13 +18,26 @@ const HSL_KYSELY = gql`
     name
     stoptimesWithoutPatterns {
         realtimeArrival
-        realtimeDeparture
-        realtime
-        realtimeState
         headsign
         serviceDay
   }
 }
+}
+`;
+const HSL_JUNAT = gql`
+  {
+  stations(name: "leppävaar") {
+    gtfsId
+    name
+    lat
+    lon
+    stops {
+      gtfsId
+      name
+      code
+      platformCode
+    }
+  }
 }
 `;
 
@@ -46,7 +59,6 @@ function HSL() {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
 
-
     return data.stops.map(({ name, stoptimesWithoutPatterns, realtimeArrival, realtimeState, serviceDay, realtime, headsign }) => (
         <div key={name, stoptimesWithoutPatterns, realtimeArrival, realtime, realtimeState, headsign, serviceDay, realtime}>
             <p>
@@ -58,11 +70,30 @@ function HSL() {
     ));
 }
 
+function HSL_1() {
+    const { loading, error, data } = useQuery(HSL_JUNAT);
+    if (loading) return <p>Loading...</p>;
+    if (error) return <p>ERROROORORORORORORORORO</p>;
+
+    return data.stations.map(({ name, gtfsID, stops, platformCode }) => (
+        <div key={name, gtfsID, stops, platformCode}>
+            <p>
+                <div>
+                {name} {stops.map(stops => <div> {stops.platformCode}</div>)}
+                </div>
+            </p>
+        </div>
+    ));
+}
+
 const App = () => (
     <ApolloProvider client={client}>
         <div>
             <h2>HSL TOIMII SITTENKIN</h2>
             <HSL />
+        </div>
+        <div>
+            <HSL_1 />
         </div>
     </ApolloProvider>
 
