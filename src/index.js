@@ -59,11 +59,11 @@ function HSL() {
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error :(</p>;
 
-    return data.stops.map(({ name, stoptimesWithoutPatterns, realtimeArrival, realtimeState, serviceDay, realtime, headsign }) => (
+    return data.stops.map(({ name, stoptimesWithoutPatterns, realtimeArrival, realtimeState, serviceDay, realtime, headsign}) => (
         <div key={name, stoptimesWithoutPatterns, realtimeArrival, realtime, realtimeState, headsign, serviceDay, realtime}>
             <p>
-                <b>Buss stop : {name}</b> {stoptimesWithoutPatterns.map(stoptimesWithoutPatterns => <div><b>Buss to : </b><b>{stoptimesWithoutPatterns.headsign}</b>
-                    <b>{muunnos(stoptimesWithoutPatterns.serviceDay, stoptimesWithoutPatterns.realtimeArrival)}</b>
+                <b>Buss stop :{name}</b>{stoptimesWithoutPatterns.map(stoptimesWithoutPatterns => <div><b>Buss to : </b><b>{stoptimesWithoutPatterns.headsign}</b>
+                    <b>{muunnos(stoptimesWithoutPatterns.serviceDay, stoptimesWithoutPatterns.realtimeArrival)}</b>                  
                 </div>)}
             </p>
         </div>
