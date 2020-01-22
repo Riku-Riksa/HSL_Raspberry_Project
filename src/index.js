@@ -7,7 +7,7 @@ import { gql } from "apollo-boost";
 import { render } from 'react-dom';
 import { useQuery } from '@apollo/react-hooks';
 
-
+//HAHHAHA KAKKAPYLLY LOL XD
 const client = new ApolloClient({
     uri: 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql',
 });
