@@ -2,7 +2,7 @@ import { ApolloProvider } from '@apollo/react-hooks';
 import React from 'react';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
-import ApolloClient from 'apollo-boost';
+import ApolloClient, { getOperationName } from 'apollo-boost';
 import { gql } from "apollo-boost";
 import { render } from 'react-dom';
 import { useQuery } from '@apollo/react-hooks';
@@ -28,6 +28,8 @@ const HSL_KYSELY = gql`
 `;
 
 function muunnos(a, b) {
+    var nykaika = getTime();
+    var aika = (a + b) - nykaika
     var myTime = new Date((a + b) * 1000);
 
     return (myTime.toLocaleTimeString());
