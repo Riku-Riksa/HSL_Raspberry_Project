@@ -9,7 +9,7 @@ import { useQuery } from '@apollo/react-hooks';
 
 const cache = new InMemoryCache();
 
-//HAHHAHA KAKKAPYLLY LOL XD
+//HAHHAHA KAKKAPYLLY LOL XDs
 const client = new ApolloClient({
     uri: 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql',
     cache
