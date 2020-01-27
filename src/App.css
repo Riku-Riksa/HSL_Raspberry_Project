@@ -36,3 +36,17 @@
     transform: rotate(360deg);
   }
 }
+.container {
+  position: relative;
+}
+
+.asema {
+  position: relative;
+  color: blue;
+  text-emphasis-color: blue;
+  font-style:  italic;
+}
+.asema-nimi {
+  text-transform: capitalize;
+}
+
