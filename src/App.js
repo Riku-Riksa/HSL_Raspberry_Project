@@ -1,5 +1,4 @@
 import React from 'react';
-
 import './App.css';
 import { useQuery} from '@apollo/react-hooks';
 import gql from "graphql-tag";
@@ -55,7 +54,7 @@ function muunnos(a, b) {
 function millisToMinutes(millis) {
   var minutes = Math.floor(millis / 60000);
   if (minutes < 1) {
-    return ' arrives in less than : ' + minutes + ' minutes';
+    return ' arrives in less than : ' + minutes + ' minute';
   }else  {
     return ' arrives in : ' + minutes + ' min';
   }
@@ -64,15 +63,15 @@ function millisToMinutes(millis) {
 
 function App() {
 const { data , loading, error} = useQuery(HSL_KYSELY);
-const { data: dataR, loading: landingR, error: erroR} = useQuery(HSL)
+const { data: Data, loading: Loading, error: Errorr} = useQuery(HSL)
 
-if(landingR) return <p></p>;
-if(erroR) return <p>{erroR.message}</p>
+if(Loading) return <p></p>;
+if(Errorr) return <p>{erroR.message}</p>
 
 if (loading) return <p>LOADING</p>;
 if (error) return <p>ERROR {error.message}</p>
 console.log(dataR);
-console.log(data);
+console.log(Data);
 
   return (
     <React.Fragment>
