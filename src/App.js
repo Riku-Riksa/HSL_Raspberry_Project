@@ -23,6 +23,26 @@ const HSL_KYSELY = gql`
 }
 `;
 
+const HSL = gql`
+  {
+    station(id: "HSL:1000202") {
+      name
+      stoptimesWithoutPatterns(numberOfDepartures: 10) {
+        stop {
+          platformCode
+        }
+        serviceDay
+        scheduledArrival
+        scheduledDeparture
+        trip {
+          route {
+            shortName
+          }
+        }
+        headsign
+      }
+    }
+  }`;
 
 function muunnos(a, b) {
   var d = new Date();
@@ -43,11 +63,15 @@ function millisToMinutes(millis) {
 
 
 function App() {
-const {data , loading, error} = useQuery(HSL_KYSELY);
+const { data , loading, error} = useQuery(HSL_KYSELY);
+const { data: dataR, loading: landingR, error: erroR} = useQuery(HSL)
+
+if(landingR) return <p></p>;
+if(erroR) return <p>{erroR.message}</p>
 
 if (loading) return <p>LOADING</p>;
 if (error) return <p>ERROR {error.message}</p>
-
+console.log(dataR);
 console.log(data);
 
   return (
@@ -69,5 +93,4 @@ console.log(data);
     </React.Fragment>
   );
 }
-
 export default App;
