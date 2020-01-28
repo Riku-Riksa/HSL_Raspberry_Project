@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import { useQuery} from '@apollo/react-hooks';
 import gql from "graphql-tag";
@@ -8,6 +8,7 @@ const HSL_KYSELY = gql`
   {
   stops(name: "gransinmäk") {
     name
+    desc
     patterns {
         route {
             shortName
@@ -50,12 +51,12 @@ console.log(data);
       <div className="container">
         {data && data.stops && data.stops.map((stops, index) => (
           <div key = {index} className="taulu">
-            <h1>{stops.name},</h1>
+            <h1>{stops.name}: {stops.desc}</h1>
         {stops.stoptimesWithoutPatterns.map((stoptimesWithoutPatterns, indx) => {
-          return <p key={indx} className="asema">{stoptimesWithoutPatterns.headsign}{muunnos(stoptimesWithoutPatterns.serviceDay, stoptimesWithoutPatterns.realtimeArrival)}</p>
+          return <l key={indx} className="asema">{stoptimesWithoutPatterns.headsign}{muunnos(stoptimesWithoutPatterns.serviceDay, stoptimesWithoutPatterns.realtimeArrival)}</l>
         })}
-        {stops.patterns.map((patterns,route, ind) => {
-          return <p key={ind} classname="lyhyt">{patterns.route.shortName}</p>
+        {stops.patterns.map((patterns, ind) => {
+          return <l key={ind} className="lyhyt">{patterns.route.shortName}</l>
         })}
           </div>
         ))}
