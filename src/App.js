@@ -50,9 +50,12 @@ console.log(data);
       <div className="container">
         {data && data.stops && data.stops.map((stops, index) => (
           <div key = {index} className="taulu">
-            <h1>{stops.name}</h1>
+            <h1>{stops.name},</h1>
         {stops.stoptimesWithoutPatterns.map((stoptimesWithoutPatterns, indx) => {
           return <p key={indx} className="asema">{stoptimesWithoutPatterns.headsign}{muunnos(stoptimesWithoutPatterns.serviceDay, stoptimesWithoutPatterns.realtimeArrival)}</p>
+        })}
+        {stops.patterns.map((patterns,route, ind) => {
+          return <p key={ind} classname="lyhyt">{patterns.route.shortName}</p>
         })}
           </div>
         ))}
