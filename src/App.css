@@ -37,17 +37,18 @@
 	}
 }
 .container {
-	position: relative;
+  position: relative;
+
 }
 
 .asema {
   display: flex;
-  align-items: center;
+ 
 }
 .asema-nimi {
 	text-transform: capitalize;
 }
 .lyhyt {
- display: flex;
- 
+  display: flex;
+  
 }

@@ -34,7 +34,7 @@ function muunnos(a, b) {
 
 function millisToMinutes(millis) {
   var minutes = Math.floor(millis / 60000);
-  if (minutes <= 0) {
+  if (minutes < 1) {
     return ' arrives in less than : ' + minutes + ' minutes';
   }else  {
     return ' arrives in : ' + minutes + ' min';
