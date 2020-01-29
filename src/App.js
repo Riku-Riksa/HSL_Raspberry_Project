@@ -66,11 +66,11 @@ const { data , loading, error} = useQuery(HSL_KYSELY);
 const { data: Data, loading: Loading, error: Errorr} = useQuery(HSL)
 
 if(Loading) return <p></p>;
-if(Errorr) return <p>{erroR.message}</p>
+if(Errorr) return <p>{error.message}</p>
 
 if (loading) return <p>LOADING</p>;
 if (error) return <p>ERROR {error.message}</p>
-console.log(dataR);
+console.log(data);
 console.log(Data);
 
   return (
