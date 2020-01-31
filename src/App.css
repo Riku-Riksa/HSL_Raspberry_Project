@@ -37,18 +37,24 @@
 	}
 }
 .container {
-  position: relative;
-
+  display: flex;
+  width: 100%;
 }
 
 .asema {
   display: flex;
- 
-}
-.asema-nimi {
-	text-transform: capitalize;
+  text-transform: capitalize;
 }
 .lyhyt {
   display: flex;
-  
+  position: relative;   
+}
+h1 {
+	color: #2E64FE;
+	text-shadow: 2px black;
+	border: 3px solid black;
+	padding: 10px;
+}
+.taulu {
+	padding: 30px;
 }
