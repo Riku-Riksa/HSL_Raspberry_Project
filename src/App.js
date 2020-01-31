@@ -79,11 +79,11 @@ console.log(Data);
         {data && data.stops && data.stops.map((stops, index) => (
           <div key = {index} className="taulu">
             <h1>{stops.name}: {stops.desc}</h1>
+            {stops.patterns.map((patterns, ind) => {
+            return <l key={ind} className="lyhyt">{patterns.route.shortName}</l>
+        })}
         {stops.stoptimesWithoutPatterns.map((stoptimesWithoutPatterns, indx) => {
           return <l key={indx} className="asema">{stoptimesWithoutPatterns.headsign}{muunnos(stoptimesWithoutPatterns.serviceDay, stoptimesWithoutPatterns.realtimeArrival)}</l>
-        })}
-        {stops.patterns.map((patterns, ind) => {
-          return <l key={ind} className="lyhyt">{patterns.route.shortName}</l>
         })}
           </div>
         ))}
