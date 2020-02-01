@@ -54,9 +54,9 @@ function muunnos(a, b) {
 function millisToMinutes(millis) {
   var minutes = Math.floor(millis / 60000);
   if (minutes < 1) {
-    return ' arrives in less than : ' + minutes + ' minute';
+    return ' ' + minutes + ' minute ';
   }else  {
-    return ' arrives in : ' + minutes + ' min';
+    return ' ' + minutes + ' min';
   }
 }
 
@@ -75,20 +75,44 @@ console.log(Data);
 
   return (
     <React.Fragment>
-      <div className="container">
-        {data && data.stops && data.stops.map((stops, index) => (
-          <div key = {index} className="taulu">
-            <h1>{stops.name}: {stops.desc}</h1>
-            {stops.patterns.map((patterns, ind) => {
-            return <l key={ind} className="lyhyt">{patterns.route.shortName}</l>
-        })}
-        {stops.stoptimesWithoutPatterns.map((stoptimesWithoutPatterns, indx) => {
-          return <l key={indx} className="asema">{stoptimesWithoutPatterns.headsign}{muunnos(stoptimesWithoutPatterns.serviceDay, stoptimesWithoutPatterns.realtimeArrival)}</l>
-        })}
+      {data && data.stops && data.stops.map((stops, index) => (
+      <div key={index} className="container-fluid dösäri">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="text-center">{stops.name}: {stops.desc}</h2>
           </div>
-        ))}
-        
+        </div>
+        <div class="row otsikot">
+          <div class="col-4 text-center">
+            <h3>BussiNro</h3>
+          </div>
+          <div class="col-4 text-center">
+            <h3>Määränpää</h3>
+          </div>
+          <div class="col-4 text-center">
+            <h3>Saapuu</h3>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 text-center">
+            {stops.patterns.map((patterns, ind) => {
+            return <p key={ind} className="tiedot">{patterns.route.shortName}</p>
+            })}
+          </div>
+          <div class="col-4 text-center">
+            {stops.stoptimesWithoutPatterns.map((stoptimesWithoutPatterns, indx) => {
+            return <p key={indx} className="tiedot">{stoptimesWithoutPatterns.headsign}</p>
+            })}
+          </div>
+          <div class="col-4 text-center">
+            {stops.stoptimesWithoutPatterns.map((stoptimesWithoutPatterns, indx) => {
+            return <p key={indx} className="tiedot">{muunnos(stoptimesWithoutPatterns.serviceDay, stoptimesWithoutPatterns.realtimeArrival)}</p>
+            })}
+          </div>
+        </div>
       </div>
+      ))}
+
     </React.Fragment>
   );
 }
