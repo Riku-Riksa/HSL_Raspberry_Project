@@ -48,7 +48,6 @@ npm install apollo-cache-inmemory --save
 npm install apollo-link-http --save
 npm install react-apollo --save
 npm install graphql-tag --save
-npm install apollo-boost --save
 
 ```
 

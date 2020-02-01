@@ -4,44 +4,41 @@ import { useQuery} from '@apollo/react-hooks';
 import gql from "graphql-tag";
 
 const HSL_KYSELY = gql`
-  {
-  stops(name: "gransinmäk") {
-    name
-    desc
-    patterns {
-        route {
-            shortName
-        }
-    }
-    stoptimesWithoutPatterns {
-        realtimeArrival
-        headsign
-        serviceDay
-  }
-}
+{
+  station(id: "HSL:1000202") {
+     name
+     stoptimesWithoutPatterns(numberOfDepartures: 10) {
+       stop {
+         platformCode
+       }
+       serviceDay
+       scheduledArrival
+       scheduledDeparture
+       trip {
+         route {
+           shortName
+         }
+       }
+       headsign
+     }
+   }
+ stops(name: "gransinmäk") {
+   name
+   desc
+   patterns {
+       route {
+           shortName
+       }
+   }
+   stoptimesWithoutPatterns {
+       realtimeArrival
+       headsign
+       serviceDay
+   }
+ }
 }
 `;
 
-const HSL = gql`
-  {
-    station(id: "HSL:1000202") {
-      name
-      stoptimesWithoutPatterns(numberOfDepartures: 10) {
-        stop {
-          platformCode
-        }
-        serviceDay
-        scheduledArrival
-        scheduledDeparture
-        trip {
-          route {
-            shortName
-          }
-        }
-        headsign
-      }
-    }
-  }`;
 
 function muunnos(a, b) {
   var d = new Date();
@@ -63,19 +60,16 @@ function millisToMinutes(millis) {
 
 function App() {
 const { data , loading, error} = useQuery(HSL_KYSELY);
-const { data: Data, loading: Loading, error: Errorr} = useQuery(HSL)
 
-if(Loading) return <p></p>;
-if(Errorr) return <p>{error.message}</p>
 
 if (loading) return <p>LOADING</p>;
 if (error) return <p>ERROR {error.message}</p>
+
 console.log(data);
-console.log(Data);
 
   return (
     <React.Fragment>
-      {data && data.stops && data.stops.map((stops, index) => (
+      {data && data.stops && data.station && data.stops.map((stops, index) => (
       <div key={index} className="container-fluid dösäri">
         <div class="row">
           <div class="col-12">
