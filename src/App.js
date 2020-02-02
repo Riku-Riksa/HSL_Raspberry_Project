@@ -69,7 +69,7 @@ console.log(data);
 
   return (
     <React.Fragment>
-      {data && data.stops && data.station && data.stops.map((stops, index) => (
+      {data && data.stops && data.station && data.stops.map((stops, station, index) => (
       <div key={index} className="container-fluid dösäri">
         <div class="row">
           <div class="col-12">
@@ -89,18 +89,18 @@ console.log(data);
         </div>
         <div class="row">
           <div class="col-4 text-center">
-            {stops.patterns.map((patterns, ind) => {
-            return <p key={ind} className="tiedot">{patterns.route.shortName}</p>
+            {stops.patterns.map((p, ind) => {
+            return <p key={ind} className="tiedot">{p.route.shortName}</p>
             })}
           </div>
           <div class="col-4 text-center">
-            {stops.stoptimesWithoutPatterns.map((stoptimesWithoutPatterns, indx) => {
-            return <p key={indx} className="tiedot">{stoptimesWithoutPatterns.headsign}</p>
+            {stops.stoptimesWithoutPatterns.map((st, indx) => {
+            return <p key={indx} className="tiedot">{st.headsign}</p>
             })}
           </div>
           <div class="col-4 text-center">
-            {stops.stoptimesWithoutPatterns.map((stoptimesWithoutPatterns, indx) => {
-            return <p key={indx} className="tiedot">{muunnos(stoptimesWithoutPatterns.serviceDay, stoptimesWithoutPatterns.realtimeArrival)}</p>
+            {stops.stoptimesWithoutPatterns.map((aika, indx) => {
+            return <p key={indx} className="tiedot">{muunnos(aika.serviceDay, aika.realtimeArrival)}</p>
             })}
           </div>
         </div>
