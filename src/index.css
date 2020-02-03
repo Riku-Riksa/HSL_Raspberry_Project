@@ -48,15 +48,13 @@ body {
 
 .tiedot {
   border-bottom: 1px solid white;
-  margin: 20px;
+  margin: 10px;
+  font-weight: bold;
+  color: white;
 }
 .container-fluid {
   width: 100%;
-}
-
-.tiedot {
-  font-weight: bold;
-  color: white;
+  position: static;
 }
 
 .laatikko {

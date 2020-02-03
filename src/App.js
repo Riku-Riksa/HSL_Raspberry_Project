@@ -53,33 +53,33 @@ console.log(data);
       {data && data.stops && data.stops.map((stops, index) => (
       <div key={index} className="container-fluid dösäri">
         <div class="row">
-          <div class="col-12">
+          <div class="col-6">
             <h2 class="text-center">{stops.name}: {stops.desc}</h2>
           </div>
         </div>
         <div class="row otsikot">
-          <div class="col-4 text-center">
-            <h3>BussiNro</h3>
+          <div class="col-2 text-center">
+            <h3>Bussin nro:</h3>
           </div>
-          <div class="col-4 text-center">
+          <div class="col-2 text-center">
             <h3>Määränpää</h3>
           </div>
-          <div class="col-4 text-center">
+          <div class="col-2 text-center">
             <h3>Saapuu</h3>
           </div>
         </div>
         <div class="row laatikko">
-          <div class="col-4 text-center">
+          <div class="col-2 text-center">
             {stops.stoptimesWithoutPatterns.map((p, ind) => {
             return <p key={ind} className="tiedot">{p.trip.routeShortName}</p>
             })}
           </div>
-          <div class="col-4 text-center">
+          <div class="col-2 text-center">
             {stops.stoptimesWithoutPatterns.map((st, indx) => {
             return <p key={indx} className="tiedot">{st.headsign}</p>
             })}
           </div>
-          <div class="col-4 text-center">
+          <div class="col-2 text-center">
             {stops.stoptimesWithoutPatterns.map((aika, indx) => {
             return <p key={indx} className="tiedot">{muunnos(aika.serviceDay, aika.realtimeArrival)}</p>
             })}
