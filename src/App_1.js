@@ -7,7 +7,7 @@ const HSL = gql`
 {
   stations(name:"leppävaaran") { 
     name
-    stoptimesWithoutPatterns {
+    stoptimesWithoutPatterns (numberOfDepartures: 10) {
       realtimeArrival
       serviceDay
        trip {
@@ -77,7 +77,7 @@ console.log(data);
           </div>
           <div class="col-2 text-center">
             {stations.stoptimesWithoutPatterns.map((junat, isoin) => {
-            return <p key={isoin} className="tiedot">{junat.trip.tripHeadsign}, {junat.trip.directionId}</p>
+            return <p key={isoin} className="tiedot">{junat.trip.tripHeadsign}</p>
             })}
           </div>
           <div class="col-2 text-center">
