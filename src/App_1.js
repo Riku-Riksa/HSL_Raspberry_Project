@@ -13,6 +13,7 @@ const HSL = gql`
        trip {
         tripHeadsign
         routeShortName
+        directionId
         
       }
     }
@@ -68,7 +69,7 @@ console.log(data);
             <h3>Saapuu</h3>
           </div>
         </div>
-        <div class="row">
+        <div class="row laatikko">
           <div class="col-4 text-center">
             {stations.stoptimesWithoutPatterns.map((juna, isompi) => {
             return <p key={isompi} className="tiedot">{juna.trip.routeShortName}</p>
@@ -76,7 +77,7 @@ console.log(data);
           </div>
           <div class="col-4 text-center">
             {stations.stoptimesWithoutPatterns.map((junat, isoin) => {
-            return <p key={isoin} className="tiedot">{junat.trip.tripHeadsign}</p>
+            return <p key={isoin} className="tiedot">{junat.trip.tripHeadsign}, {junat.trip.directionId}</p>
             })}
           </div>
           <div class="col-4 text-center">

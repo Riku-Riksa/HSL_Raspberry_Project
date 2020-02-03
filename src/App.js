@@ -68,7 +68,7 @@ console.log(data);
             <h3>Saapuu</h3>
           </div>
         </div>
-        <div class="row">
+        <div class="row laatikko">
           <div class="col-4 text-center">
             {stops.stoptimesWithoutPatterns.map((p, ind) => {
             return <p key={ind} className="tiedot">{p.trip.routeShortName}</p>
