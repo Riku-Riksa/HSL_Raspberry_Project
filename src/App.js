@@ -5,37 +5,18 @@ import gql from "graphql-tag";
 
 const HSL_KYSELY = gql`
 {
-  station(id: "HSL:1000202") {
-     name
-     stoptimesWithoutPatterns(numberOfDepartures: 10) {
-       stop {
-         platformCode
-       }
-       serviceDay
-       scheduledArrival
-       scheduledDeparture
-       trip {
-         route {
-           shortName
-         }
-       }
-       headsign
-     }
-   }
- stops(name: "gransinmäk") {
-   name
-   desc
-   patterns {
-       route {
-           shortName
-       }
-   }
-   stoptimesWithoutPatterns {
-       realtimeArrival
-       headsign
-       serviceDay
-   }
- }
+  stops(name:"gransinmäk") {
+    name
+    desc
+    stoptimesWithoutPatterns {
+      headsign
+      realtimeArrival
+      serviceDay
+      trip {
+        routeShortName
+      }
+    }
+  }
 }
 `;
 
@@ -69,7 +50,7 @@ console.log(data);
 
   return (
     <React.Fragment>
-      {data && data.stops && data.station && data.stops.map((stops, station, index) => (
+      {data && data.stops && data.stops.map((stops, index) => (
       <div key={index} className="container-fluid dösäri">
         <div class="row">
           <div class="col-12">
@@ -89,8 +70,8 @@ console.log(data);
         </div>
         <div class="row">
           <div class="col-4 text-center">
-            {stops.patterns.map((p, ind) => {
-            return <p key={ind} className="tiedot">{p.route.shortName}</p>
+            {stops.stoptimesWithoutPatterns.map((p, ind) => {
+            return <p key={ind} className="tiedot">{p.trip.routeShortName}</p>
             })}
           </div>
           <div class="col-4 text-center">
@@ -106,7 +87,6 @@ console.log(data);
         </div>
       </div>
       ))}
-
     </React.Fragment>
   );
 }
