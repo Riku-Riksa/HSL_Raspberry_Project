@@ -65,13 +65,13 @@ body {
 
 h2 {
   color: #0A65BB;
-  font-family: 'Source Code Pro', monospace;
+  font-family: 'FreePixel';
 }
 
 html {
   font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif; 
 }
 
-.gg {
-  
+@font-face { 
+  font-family: FreePixel; src: url('FreePixel.ttf');
 }
