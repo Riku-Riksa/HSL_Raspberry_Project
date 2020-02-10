@@ -66,18 +66,18 @@ console.log(data);
       <div key={index} className="container-fluid dösäri">
         <div class="row">
           <div class="col-12">
-            <h2 class="text-center">{stops.name}: {stops.desc} {tunniste(stops.id)}</h2>
+            <h3 class="text-center">{stops.name}: {stops.desc} {tunniste(stops.id)}</h3>
           </div>
         </div>
         <div class="row otsikot">
           <div class="col-4 text-center">
-            <h3>BussiNro</h3>
+            <h4>BussiNro</h4>
           </div>
           <div class="col-4 text-center">
-            <h3>Määränpää</h3>
+            <h4>Määränpää</h4>
           </div>
           <div class="col-4 text-center">
-            <h3>Saapuu</h3>
+            <h4>Saapuu</h4>
           </div>
         </div>
         <div class="row laatikko">

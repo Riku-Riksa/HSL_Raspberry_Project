@@ -29,22 +29,17 @@ body {
 /*Optional: Makes the sample page fill the window.*/
 body {
   margin-top: 10px;
-  padding: 0;
-  border: 0;
   background-color: #A9D5FF;
 }
 
 .otsikot {
   background-color: #FF9BD5;
   border-radius: 25px;
-  margin: 15px;
+  margin: 10px;
   color: white;
+  box-shadow: 2px 2px 2px 2px #888888;
 }
 
-/*.dösäri {
-  height: 300px;
-  overflow: hidden;
-}*/
 
 .tiedot {
   border-bottom: 1px solid white;
@@ -53,25 +48,21 @@ body {
   color: white;
 }
 .container-fluid {
-  width: 100%;
   position: static;
 }
 
 .laatikko {
   border-radius: 25px;
   background-color: #20C9EE;
-  margin: 20px;
+  margin: 10px;
+  box-shadow: 2px 2px 2px 2px #888888;
 }
 
-h2 {
+h3 {
   color: #0A65BB;
   font-family: 'FreePixel';
 }
 
 html {
   font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif; 
-}
-
-@font-face { 
-  font-family: FreePixel; src: url('FreePixel.ttf');
 }
