@@ -63,7 +63,7 @@ console.log(data);
             <h4>Juna:</h4>
           </div>
           <div class="col-4 text-center">
-            <h4>Määränpää</h4>
+            <h4>Minne</h4>
           </div>
           <div class="col-4 text-center">
             <h4>Saapuu</h4>
