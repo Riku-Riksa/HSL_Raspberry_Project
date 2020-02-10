@@ -8,6 +8,7 @@ const HSL_KYSELY = gql`
   stops(name:"gransinmäk") {
     name
     desc
+    id
     stoptimesWithoutPatterns {
       headsign
       realtimeArrival
@@ -20,6 +21,16 @@ const HSL_KYSELY = gql`
 }
 `;
 
+function tunniste (c) {
+  var iidee = (c);
+  if (iidee == "U3RvcDpIU0w6MjExMTIxMA==") {
+    return '(Kellosepän Pysäkki)';
+
+  } else {
+    return '(Ei Kellosepän pyäskki)';
+  }
+
+}
 
 function muunnos(a, b) {
   var d = new Date();
@@ -54,7 +65,7 @@ console.log(data);
       <div key={index} className="container-fluid dösäri">
         <div class="row">
           <div class="col-12">
-            <h2 class="text-center">{stops.name}: {stops.desc}</h2>
+            <h2 class="text-center">{stops.name}: {stops.desc} {tunniste(stops.id)}</h2>
           </div>
         </div>
         <div class="row otsikot">
