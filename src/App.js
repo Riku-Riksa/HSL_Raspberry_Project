@@ -61,6 +61,7 @@ console.log(data);
 
   return (
     <React.Fragment>
+      <div className= "gg">
       {data && data.stops && data.stops.map((stops, index) => (
       <div key={index} className="container-fluid dösäri">
         <div class="row">
@@ -98,7 +99,9 @@ console.log(data);
         </div>
       </div>
       ))}
+      </div>
     </React.Fragment>
+    
   );
 }
 export default App;

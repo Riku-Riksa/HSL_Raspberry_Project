@@ -55,11 +55,16 @@ console.log(data);
       <div key={iso} className="container-fluid dösäri">
         <div class="row">
           <div class="col-12">
+<<<<<<< HEAD
             <h3 class="text-center">{stations.name}</h3>
+=======
+            <h2 class="text-center">{stations.name}</h2>
+>>>>>>> 00a875da09703309665cabcda8769583bf98991f
           </div>
         </div>
         <div class="row otsikot">
           <div class="col-4 text-center">
+<<<<<<< HEAD
             <h4>Juna:</h4>
           </div>
           <div class="col-4 text-center">
@@ -67,6 +72,15 @@ console.log(data);
           </div>
           <div class="col-4 text-center">
             <h4>Saapuu</h4>
+=======
+            <h3>Juna nro:</h3>
+          </div>
+          <div class="col-4 text-center">
+            <h3>Määränpää</h3>
+          </div>
+          <div class="col-4 text-center">
+            <h3>Saapuu</h3>
+>>>>>>> 00a875da09703309665cabcda8769583bf98991f
           </div>
         </div>
         <div class="row laatikko">
