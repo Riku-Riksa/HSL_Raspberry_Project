@@ -27,7 +27,7 @@ function tunniste (c) {
     return '(Kellosepän Pysäkki)';
 
   } else {
-    return '(Ei Kellosepän pyäskki)';
+    return '(Metropolian pysäkki)';
   }
 
 }
