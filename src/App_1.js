@@ -60,7 +60,7 @@ console.log(data);
         </div>
         <div class="row otsikot">
           <div class="col-4 text-center">
-            <h4>Juna nro:</h4>
+            <h4>Juna:</h4>
           </div>
           <div class="col-4 text-center">
             <h4>Määränpää</h4>
