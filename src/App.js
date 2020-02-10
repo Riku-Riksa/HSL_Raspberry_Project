@@ -54,44 +54,43 @@ function App() {
 const { data , loading, error} = useQuery(HSL_KYSELY);
 
 
+
 if (loading) return <p>LOADING</p>;
 if (error) return <p>ERROR {error.message}</p>
 
-console.log(data);
 
   return (
     <React.Fragment>
-      <div className= "gg">
       {data && data.stops && data.stops.map((stops, index) => (
       <div key={index} className="container-fluid dösäri">
         <div class="row">
           <div class="col-12">
-            <h3 class="text-center">{stops.name}: {stops.desc} {tunniste(stops.id)}</h3>
+            <h2 class="text-center">{stops.name}: {stops.desc} {tunniste(stops.id)}</h2>
           </div>
         </div>
         <div class="row otsikot">
-          <div class="col-4 text-center">
+          <div class="col-3 text-center">
             <h4>BussiNro</h4>
           </div>
-          <div class="col-4 text-center">
+          <div class="col-6 text-center">
             <h4>Määränpää</h4>
           </div>
-          <div class="col-4 text-center">
+          <div class="col-3 text-center">
             <h4>Saapuu</h4>
           </div>
         </div>
         <div class="row laatikko">
-          <div class="col-4 text-center">
+          <div class="col-3 text-center">
             {stops.stoptimesWithoutPatterns.map((p, ind) => {
             return <p key={ind} className="tiedot">{p.trip.routeShortName}</p>
             })}
           </div>
-          <div class="col-4 text-center">
+          <div class="col-6 text-center">
             {stops.stoptimesWithoutPatterns.map((st, indx) => {
             return <p key={indx} className="tiedot">{st.headsign}</p>
             })}
           </div>
-          <div class="col-4 text-center">
+          <div class="col-3 text-center">
             {stops.stoptimesWithoutPatterns.map((aika, indx) => {
             return <p key={indx} className="tiedot">{muunnos(aika.serviceDay, aika.realtimeArrival)}</p>
             })}
@@ -99,7 +98,6 @@ console.log(data);
         </div>
       </div>
       ))}
-      </div>
     </React.Fragment>
     
   );
