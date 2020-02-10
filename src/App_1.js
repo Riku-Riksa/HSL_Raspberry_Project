@@ -54,33 +54,33 @@ console.log(data);
       {data && data.stations && data.stations.map((stations, iso) => (
       <div key={iso} className="container-fluid dösäri">
         <div class="row">
-          <div class="col-6">
-            <h2 class="text-center">{stations.name}</h2>
+          <div class="col-12">
+            <h3 class="text-center">{stations.name}</h3>
           </div>
         </div>
         <div class="row otsikot">
-          <div class="col-2 text-center">
-            <h3>Juna nro:</h3>
+          <div class="col-4 text-center">
+            <h4>Juna:</h4>
           </div>
-          <div class="col-2 text-center">
-            <h3>Määränpää</h3>
+          <div class="col-4 text-center">
+            <h4>Määränpää</h4>
           </div>
-          <div class="col-2 text-center">
-            <h3>Saapuu</h3>
+          <div class="col-4 text-center">
+            <h4>Saapuu</h4>
           </div>
         </div>
         <div class="row laatikko">
-          <div class="col-2 text-center">
+          <div class="col-4 text-center">
             {stations.stoptimesWithoutPatterns.map((juna, isompi) => {
             return <p key={isompi} className="tiedot">{juna.trip.routeShortName}</p>
             })}
           </div>
-          <div class="col-2 text-center">
+          <div class="col-4 text-center">
             {stations.stoptimesWithoutPatterns.map((junat, isoin) => {
             return <p key={isoin} className="tiedot">{junat.trip.tripHeadsign}</p>
             })}
           </div>
-          <div class="col-2 text-center">
+          <div class="col-4 text-center">
             {stations.stoptimesWithoutPatterns.map((tiem, isi) => {
             return <p key={isi} className="tiedot">{muunnos(tiem.serviceDay, tiem.realtimeArrival)}</p>
             })}
