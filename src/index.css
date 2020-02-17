@@ -4,25 +4,25 @@
 
 body {
   margin-top: 30px;
-  background-color: #000748;
+  background-color: #1d1f21;
   max-width: 100%;
   overflow-x: hidden;
 }
 
 .otsikot {
-  background-color: #000748;
+  background-color: #1d1f21;
   border-radius: 15px;
   margin: 8px;
-  color: #DEE506;
+  color: orange;
   box-shadow: 2px 2px #ffffff;
   font-family: 'VT323', monospace;
 }
 
 .tiedot {
-  margin: 10px;
-  color: #DEE506;
+  margin: 6px;
+  color: orange;
   font-family: 'VT323', monospace;
-  font-size: larger;
+  font-size: 25px;
 }
 
 .container-fluid {
@@ -31,7 +31,7 @@ body {
 
 .laatikko {
   border-radius: 25px;
-  background-color: #000748;
+  background-color: #1d1f21;
   margin: 10px;
   margin-top: 10px;
   /*box-shadow: 2px 2px #ffffff;*/
@@ -41,12 +41,12 @@ body {
 
 
 h3 {
-  color: #DEE506;
+  color: orange;
   font-family: 'VT323', monospace;
 }
 
 h2 {
-  color: #DEE506;
+  color: orange;
   font-family: 'VT323', monospace;
 }
 
@@ -54,3 +54,6 @@ html {
   font-family: 'VT323', monospace;
 }
 
+.lyhyt {
+  font-size: 50px;
+}
