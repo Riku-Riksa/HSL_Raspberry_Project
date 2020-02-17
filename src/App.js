@@ -43,7 +43,7 @@ function muunnos(a, b) {
 function millisToMinutes(millis) {
   var minutes = Math.floor(millis / 60000);
   if (minutes < 1) {
-    return ' ' + minutes + ' minute ';
+    return ' ' + minutes + ' min ';
   }else  {
     return ' ' + minutes + ' min';
   }
