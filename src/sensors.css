@@ -23,7 +23,16 @@ body {
 
 iframe {
   border: none;
-  text-align: justify;
+  text-align: center;
 }
+
+.card {
+  margin: 20px;
+  border-width: 5px;
+  border-color: black;
+  border-radius: 25px;
+}
+
+
 
 
