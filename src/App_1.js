@@ -60,13 +60,13 @@ console.log(data);
         </div>
         <div class="row otsikot">
           <div class="col-4 text-center">
-            <h4>Juna</h4>
+            <h4>Train</h4>
           </div>
           <div class="col-4 text-center">
-            <h4>Minne</h4>
+            <h4>Destination</h4>
           </div>
           <div class="col-4 text-center">
-            <h4>Saapuu</h4>
+            <h4>Arrives</h4>
           </div>
         </div>
         <div class="row laatikko">

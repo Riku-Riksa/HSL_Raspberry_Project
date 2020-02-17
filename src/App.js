@@ -70,13 +70,13 @@ if (error) return <p>ERROR {error.message}</p>
         </div>
         <div class="row otsikot">
           <div class="col-3 text-center">
-            <h4>BussiNro</h4>
+            <h4>Bus</h4>
           </div>
           <div class="col-6 text-center">
-            <h4>Määränpää</h4>
+            <h4>Destination</h4>
           </div>
           <div class="col-3 text-center">
-            <h4>Saapuu</h4>
+            <h4>Arrives</h4>
           </div>
         </div>
         <div class="row laatikko">
