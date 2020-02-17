@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+}
+
+/*Optional: Makes the sample page fill the window.*/
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.container-fluid {
+  min-height: 100vh;
+}
+
+.rivi1 {
+  background-color: #019dd5;
+}
+
+.saa {
+  min-height: 15vh;
+}
+
+iframe {
+  border: none;
+  text-align: justify;
+}
+
+
