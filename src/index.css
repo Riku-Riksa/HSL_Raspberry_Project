@@ -9,18 +9,11 @@ body {
   border: 0;
 }
 
-.otsikot {
-  background-color: #019dd5;
-}
 
 /*.dösäri {
   height: 300px;
   overflow: hidden;
 }*/
-
-.tiedot {
-  border-bottom: 1px solid #019dd5;
-}
 
 * {
   box-sizing: border-box;
@@ -29,40 +22,41 @@ body {
 /*Optional: Makes the sample page fill the window.*/
 body {
   margin-top: 10px;
-  background-color: #A9D5FF;
+  background-color: #01166B;
 }
 
 .otsikot {
-  background-color: #FF9BD5;
+  background-color: #01166B;
   border-radius: 25px;
   margin: 10px;
-  color: white;
-  box-shadow: 2px 2px 2px 2px #888888;
+  color: #DEE506;
+  box-shadow: 2px 2px #ffffff;
+  font-family: 'VT323', monospace;
 }
 
 
 .tiedot {
-  border-bottom: 1px solid white;
   margin: 10px;
   font-weight: bold;
-  color: white;
+  color: #DEE506;
 }
+
 .container-fluid {
   position: static;
 }
 
 .laatikko {
   border-radius: 25px;
-  background-color: #20C9EE;
+  background-color: #01166B;
   margin: 10px;
-  box-shadow: 2px 2px 2px 2px #888888;
+  box-shadow: 2px 2px #ffffff;
 }
 
 h3 {
-  color: #0A65BB;
-  font-family: 'FreePixel';
+  color: #DEE506;
+  font-family: 'VT323', monospace;
 }
 
 html {
-  font-family: Helvetica,Arial,"Nimbus Sans L",sans-serif; 
+  font-family: 'VT323', monospace;
 }
