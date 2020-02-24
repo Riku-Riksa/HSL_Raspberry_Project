@@ -9,6 +9,7 @@ body {
   border: 0;
   overflow-x: hidden;
   overflow-y: hidden;
+  background-color: #1d1f21;
 }
 
 .container-fluid {
@@ -30,24 +31,53 @@ iframe {
 #myFrame {
   border: none;
   overflow: hidden;
-  padding-left: 23px;
+  margin-left: 65px;
   -ms-zoom: 4;
-        -moz-transform: scale(4);
-        -moz-transform-origin: 0 0;
-        -o-transform: scale(4);
-        -o-transform-origin: 0 0;
-        -webkit-transform: scale(4);
-        -webkit-transform-origin: 0 0;
+  -moz-transform: scale(4);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(4);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(4);
+  -webkit-transform-origin: 0 0;
+}
+
+#kosteus {
+  border: none;
+  overflow: hidden;
+  margin-left: 99px;
+  -ms-zoom: 4;
+  -moz-transform: scale(4);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(4);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(4);
+  -webkit-transform-origin: 0 0;
+}
+
+#lämpö {
+  border: none;
+  overflow: hidden;
+  margin-left: 100px;
+  -ms-zoom: 4;
+  -moz-transform: scale(4);
+  -moz-transform-origin: 0 0;
+  -o-transform: scale(4);
+  -o-transform-origin: 0 0;
+  -webkit-transform: scale(4);
+  -webkit-transform-origin: 0 0;
 }
 
 .card {
   margin: 20px;
-  border-width: 5px;
-  border-color: black;
+  margin-top: 150px;
   border-radius: 25px;
-  box-shadow: 4px 4px grey;
   text-align: center;
+  -webkit-box-shadow: 8px -7px 8px -1px orange;
+  -moz-box-shadow: 8px -7px 8px -1px orange;
+  box-shadow: 8px -7px 8px -1px orange;
 }
+
+
 
 
 
