@@ -22,8 +22,11 @@ body {
 }
 
 iframe {
+  border: none ;
+}
+
+.myFrame {
   border: none;
-  text-align: center;
 }
 
 .card {
@@ -31,7 +34,12 @@ iframe {
   border-width: 5px;
   border-color: black;
   border-radius: 25px;
+  box-shadow: 4px 4px grey;
+  text-align: center;
 }
+
+
+
 
 
 
