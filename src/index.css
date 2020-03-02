@@ -22,7 +22,7 @@ body {
   margin: 6px;
   color: orange;
   font-family: 'VT323', monospace;
-  font-size: 25px;
+  font-size: 16px;
 }
 
 .container-fluid {
@@ -34,7 +34,6 @@ body {
   background-color: #1d1f21;
   margin: 10px;
   margin-top: 10px;
-  /*box-shadow: 2px 2px #ffffff;*/
   border: 2px solid white;
 }
 
