@@ -15,14 +15,14 @@ body {
   margin: 8px;
   color: orange;
   box-shadow: 2px 2px #ffffff;
-  font-family: 'VT323', monospace;
+  font-family: 'Titillium Web', ;
 }
 
 .tiedot {
   margin: 6px;
   color: orange;
-  font-family: 'VT323', monospace;
-  font-size: 16px;
+  font-family: 'Titillium Web', ;
+  font-size: 1,75em;
 }
 
 .container-fluid {
@@ -39,18 +39,23 @@ body {
 
 h3 {
   color: orange;
-  font-family: 'VT323', monospace;
+  font-family: 'Titillium Web', ;
 }
 
 h2 {
   color: orange;
-  font-family: 'VT323', monospace;
+  font-family: 'Titillium Web', ;
+  font-size: 1,95em;
+}
+
+h4 {
+  font-size: 1,95em;
 }
 
 html {
-  font-family: 'VT323', monospace;
+  font-family: 'Titillium Web', ;
 }
 
 .lyhyt {
-  font-size: 50px;
+  font-size: 1,25em;
 }

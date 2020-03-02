@@ -10,6 +10,7 @@ body {
   overflow-x: hidden;
   overflow-y: hidden;
   background-color: #1d1f21;
+  font-family: 'Titillium Web', ;
 }
 
 .container-fluid {
@@ -26,6 +27,7 @@ body {
 
 iframe {
   border: none ;
+  font-family: 'Titillium Web', ;
 }
 
 #myFrame {
@@ -39,6 +41,7 @@ iframe {
   -o-transform-origin: 0 0;
   -webkit-transform: scale(4);
   -webkit-transform-origin: 0 0;
+  font-family: 'Titillium Web', ;
 }
 
 #kosteus {
@@ -52,6 +55,7 @@ iframe {
   -o-transform-origin: 0 0;
   -webkit-transform: scale(4);
   -webkit-transform-origin: 0 0;
+  font-family: 'Titillium Web', ;
 }
 
 #lämpö {
@@ -65,6 +69,7 @@ iframe {
   -o-transform-origin: 0 0;
   -webkit-transform: scale(4);
   -webkit-transform-origin: 0 0;
+  font-family: 'Titillium Web', ;
 }
 
 .card {
