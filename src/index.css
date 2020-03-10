@@ -29,8 +29,8 @@ body {
 
 .laatikko {
   border-radius: 25px;
+  margin-top: 1vh;
   background-color: #232425;
-  margin-top: 25px;
   border: 2px solid white;
 }
 
@@ -44,7 +44,7 @@ h2 {
   font-family: 'Titillium Web', ;
   font-size: 1,95em;
   margin-bottom: 40px;
-  margin-top: 25px;
+  margin-top: 15vh;
 }
 
 h4 {

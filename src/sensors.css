@@ -30,9 +30,9 @@ iframe {
 }
 
 #myFrame {
+  padding-right: 30px;
   border: none;
   overflow: hidden;
-  margin-left: 65px;
   -ms-zoom: 4;
   -moz-transform: scale(4);
   -moz-transform-origin: 0 0;
@@ -44,9 +44,9 @@ iframe {
 }
 
 #kosteus {
+  padding-left: 2px;
   border: none;
   overflow: hidden;
-  margin-left: 99px;
   -ms-zoom: 4;
   -moz-transform: scale(4);
   -moz-transform-origin: 0 0;
@@ -58,9 +58,9 @@ iframe {
 }
 
 #lämpö {
+  padding-left: 8px;
   border: none;
   overflow: hidden;
-  margin-left: 100px;
   -ms-zoom: 4;
   -moz-transform: scale(4);
   -moz-transform-origin: 0 0;
@@ -74,12 +74,22 @@ iframe {
 .card {
   margin: 20px;
   margin-top: 150px;
+  background-color: #232425;
+  border-color: rgb(0, 174, 239);
   border-radius: 25px;
-  text-align: center;
-  -webkit-box-shadow: 8px -7px 8px -1px rgb(0, 174, 239);
-  -moz-box-shadow: 8px -7px 8px -1px rgb(0, 174, 239);
-  box-shadow: 8px -7px 8px -1px rgb(0, 174, 239);
+  border-width: 3px;
+  /*text-align: center;*/
+  -webkit-box-shadow: 10px -7px 10px -1px rgb(0, 174, 239);
+  -moz-box-shadow: 10px -7px 10px -1px rgb(0, 174, 239);
+  box-shadow: 10px -7px 10px -1px rgb(0, 174, 239);
 }
+
+.card-title {
+  color: rgb(0, 174, 239);
+  padding-left: 50px;
+}
+
+
 
 
 
