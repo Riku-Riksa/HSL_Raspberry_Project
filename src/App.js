@@ -21,16 +21,6 @@ const HSL_KYSELY = gql`
 }
 `;
 
-function tunniste (c) {
-  var iidee = (c);
-  if (iidee == "U3RvcDpIU0w6MjExMTIxMA==") {
-    return '(Laurean pysäkki)';
-
-  } else {
-    return '(Metropolian pysäkki)';
-  }
-
-}
 
 function muunnos(a, b) {
   var d = new Date();

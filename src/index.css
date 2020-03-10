@@ -14,13 +14,14 @@ body {
   color: rgb(0, 174, 239);
   box-shadow: 2px 2px #ffffff;
   font-family: 'Titillium Web', ;
+  
 }
 
 .tiedot {
   margin: 6px;
   color:rgb(0, 174, 239);
   font-family: 'Titillium Web', ;
-  font-size: large;
+  font-size: x-large;
 }
 
 .container-fluid {
@@ -34,22 +35,21 @@ body {
   border: 2px solid white;
 }
 
-h3 {
-  color: rgb(0, 174, 239);
-  font-family: 'Titillium Web', ;
-}
+
 
 h2 {
   color: rgb(0, 174, 239);
   font-family: 'Titillium Web', ;
-  font-size: 1,95em;
+  font-size: 3em;
   margin-bottom: 40px;
   margin-top: 15vh;
 }
 
 h4 {
-  font-size: 1,95em;
+  font-size: 2em;
 }
+
+
 
 html {
   font-family: 'Titillium Web', ;

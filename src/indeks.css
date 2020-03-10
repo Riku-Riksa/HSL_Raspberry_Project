@@ -20,14 +20,15 @@ body {
 
 .rivi1 {
   background-color: #232425;
+  height: 10vh;
 }
 
 .saa {
-  height: 15vh;
+  /*height: 15vh;*/
 }
 
 .kartta {
-  height: 85vh;
+  height: 90vh;
   width: inherit;
   padding: 0 !important;
   margin: 0 !important;
