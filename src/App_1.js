@@ -5,7 +5,7 @@ import gql from "graphql-tag";
 
 const HSL = gql`
 {
-  stations(name:"leppävaaran") { 
+  stations(ids:"HSL:2000202") { 
     name
     stoptimesWithoutPatterns (numberOfDepartures: 10) {
       realtimeArrival

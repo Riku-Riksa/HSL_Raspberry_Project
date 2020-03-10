@@ -4,23 +4,23 @@
 
 body {
   margin-top: 10px;
-  background-color: #1d1f21;
+  background-color: #232425;
   max-width: 100%;
   overflow-x: hidden;
 }
 
 .otsikot {
-  background-color: #1d1f21;
+  background-color: #232425;
   border-radius: 15px;
   margin: 8px;
-  color: orange;
+  color: rgb(0, 174, 239);
   box-shadow: 2px 2px #ffffff;
   font-family: 'Titillium Web', ;
 }
 
 .tiedot {
   margin: 6px;
-  color: orange;
+  color: #ffffff;
   font-family: 'Titillium Web', ;
   font-size: 1,75em;
 }
@@ -31,19 +31,19 @@ body {
 
 .laatikko {
   border-radius: 25px;
-  background-color: #1d1f21;
+  background-color: #232425;
   margin: 10px;
   margin-top: 10px;
   border: 2px solid white;
 }
 
 h3 {
-  color: orange;
+  color: rgb(0, 174, 239);
   font-family: 'Titillium Web', ;
 }
 
 h2 {
-  color: orange;
+  color: rgb(0, 174, 239);
   font-family: 'Titillium Web', ;
   font-size: 1,95em;
 }

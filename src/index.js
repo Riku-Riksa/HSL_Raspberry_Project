@@ -13,7 +13,7 @@ const cache = new InMemoryCache();
 const link = new HttpLink ({
     uri: 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql'
 })
-//HAHHAHA KAKKAPYLLY LOL XDs
+
 const client = new ApolloClient({
     link,
     cache

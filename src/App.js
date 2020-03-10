@@ -5,7 +5,7 @@ import gql from "graphql-tag";
 
 const HSL_KYSELY = gql`
 {
-  stops(name:"gransinmäk") {
+  stops(ids: "HSL:2111210") {
     name
     desc
     id
