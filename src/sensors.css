@@ -9,7 +9,7 @@ body {
   border: 0;
   overflow-x: hidden;
   overflow-y: hidden;
-  background-color: #1d1f21;
+  background-color: #232425;
   font-family: 'Titillium Web', ;
 }
 
@@ -18,7 +18,7 @@ body {
 }
 
 .rivi1 {
-  background-color: #1d1f21;
+  background-color: #232425;
 }
 
 .saa {
@@ -77,9 +77,9 @@ iframe {
   margin-top: 150px;
   border-radius: 25px;
   text-align: center;
-  -webkit-box-shadow: 8px -7px 8px -1px orange;
-  -moz-box-shadow: 8px -7px 8px -1px orange;
-  box-shadow: 8px -7px 8px -1px orange;
+  -webkit-box-shadow: 8px -7px 8px -1px rgb(0, 174, 239);
+  -moz-box-shadow: 8px -7px 8px -1px rgb(0, 174, 239);
+  box-shadow: 8px -7px 8px -1px rgb(0, 174, 239);
 }
 
 

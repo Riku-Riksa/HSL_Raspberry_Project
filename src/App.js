@@ -9,7 +9,7 @@ const HSL_KYSELY = gql`
     name
     desc
     id
-    stoptimesWithoutPatterns {
+    stoptimesWithoutPatterns (numberOfDepartures: 10) {
       headsign
       realtimeArrival
       serviceDay
@@ -24,7 +24,7 @@ const HSL_KYSELY = gql`
 function tunniste (c) {
   var iidee = (c);
   if (iidee == "U3RvcDpIU0w6MjExMTIxMA==") {
-    return '(Kellosepän Pysäkki)';
+    return '(Laurean pysäkki)';
 
   } else {
     return '(Metropolian pysäkki)';
@@ -65,7 +65,7 @@ if (error) return <p>ERROR {error.message}</p>
       <div key={index} className="container-fluid dösäri">
         <div class="row">
           <div class="col-12">
-            <h2 class="text-center">{stops.name}: {stops.desc} {tunniste(stops.id)}</h2>
+            <h2 class="text-center">{stops.name}: {stops.desc}</h2>
           </div>
         </div>
         <div class="row otsikot">
