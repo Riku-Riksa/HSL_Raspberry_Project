@@ -55,8 +55,9 @@ npm install graphql-tag --save
 
 ## Contributors:
 
+```
 Riku Virtanen
 Sakari Kuosmanen 
 Tommi Haapa
 Johannes Taskinen
-
+```
