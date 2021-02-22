@@ -51,3 +51,12 @@ npm install graphql-tag --save
 
 ```
 
+## Remember to insert your own google map api!!! 
+
+## Contributors:
+
+Riku Virtanen
+Sakari Kuosmanen 
+Tommi Haapa
+Johannes Taskinen
+
